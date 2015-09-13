@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <style>
       .infinitelives-spinner {
@@ -11,22 +11,40 @@
         background-size: 112px 96px;
         margin-left: auto;
         margin-right: auto;
-        animation: 1.5s ease-in-out 0s normal none infinite running infinitelives-spinner-fader;
+        animation: infinitelives-spinner-fader 1.3s ease 0s infinite normal none running ;
         background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABgAQMAAAD/+GSTAAAABlBMVEUAAAD5aQnSkZnaAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQffCQwDFhf1d1faAAAAGXRFWHRDb21tZW50AENyZWF0ZWQgd2l0aCBHSU1QV4EOFwAAAC9JREFUOMtjYGD4DwQwkmHYc//DAYg9krhgoWHPRY3hkcCFCTAwjBQuOGEzjAguAHqAPO46M2SkAAAAAElFTkSuQmCC);
       }
-      
+
       @-webkit-keyframes infinitelives-spinner-fader {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
+        0% { opacity: 0.7;
+             transform: scale(1);}
+        5% { opacity: 1;
+             transform: scale(1.2);}
+        25% { opacity: 0.7;
+              transform: scale(1);}
+        32% { opacity: 1;
+              transform: scale(1.2);}
+
+        100% { opacity: 0.5;
+              transform: scale(0.95);}
       }
-      
+
       @keyframes infinitelives-spinner-fader {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
+        0% { opacity: 0.7;
+             transform: scale(1);}
+        5% { opacity: 1;
+             transform: scale(1.2);}
+        25% { opacity: 0.7;
+              transform: scale(1);}
+        32% { opacity: 1;
+              transform: scale(1.2);}
+
+        100% { opacity: 0.5;
+              transform: scale(0.95);}
       }
-      
+
       /* this is optional */
-      
+
       .infinitelives-spinner-vertical-center {
         position: absolute;
         left: 50%;
@@ -34,7 +52,7 @@
         margin-left: -56px;
         margin-top: -48px;
       }
-      
+
       html, body {
         margin: 0px;
         height: 100%;
